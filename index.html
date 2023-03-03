@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="./css/normalize.css">
@@ -10,17 +10,12 @@
   
   <title>Frontend Mentor | Fylo landing page with dark theme and features grid</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
 
   <header class="nav">
 
-    <img src="./images/logo.svg" alt="logo">
+    <img src="./images/logo.svg" alt="logo" class="nav__logo">
 
     <div class="nav__order">
       <a href="" class="nav__article">Features</a>
@@ -48,7 +43,6 @@
     </section>
   
     <section class="features wrapper">
-      
       <div class="article">
         <img src="./images/icon-access-anywhere.svg" alt="Anywhere" class="article__img">
 
@@ -88,40 +82,76 @@
           file types to be securely stored and shared.
         </p>
       </div>
-      
-
     </section>
 
-    Stay productive, wherever you are
+    <section class="anounced">
 
-  Never let location be an issue when accessing your files. Fylo has you covered for all of your file 
-  storage needs.
-
-  Securely share files and folders with friends, family and colleagues for live collaboration. No email 
-  attachments required.
-
-  See how Fylo works
-
-  Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has 
-  become a well-oiled collaboration machine.
-
-  Satish Patel
-  Founder & CEO, Huddle
-
-  Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has 
-  become a well-oiled collaboration machine.
-
-  Bruce McKenzie
-  Founder & CEO, Huddle
-
-  Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has 
-  become a well-oiled collaboration machine.
-
-  Iva Boyd
-  Founder & CEO, Huddle
-
+      <img src="./images/illustration-stay-productive.png" alt="Stay productive" class="anounced__img">
+      
+      <div class="anounced__content">
+        <p class="anounced__title">Stay productive, wherever you are</p>
   
+        <p class="anounced__text">
+          Never let location be an issue when accessing your files. Fylo has you covered for all of your file 
+          storage needs.
+        </p>
+        <p class="anounced__text">
+          Securely share files and folders with friends, family and colleagues for live collaboration. No email 
+          attachments required.
+        </p>
   
+        <a href="#" class="anounced__link">See how Fylo works</a>
+
+      </div>
+      
+    </section>
+
+    <section class="comment">
+      <div class="comment__content">
+        <p class="comment__text">
+          Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has 
+          become a well-oiled collaboration machine.
+        </p>
+        
+        <div class="comment__info">
+          <img src="./images/profile-1.jpg" alt="" class="comment__img">
+          <div>
+            <h2 class="comment__name">Satish Patel</h2>
+            <p>Founder & CEO, Huddle</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="comment__content">
+        <p class="comment__text">
+          Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has 
+          become a well-oiled collaboration machine.  
+        </p>
+        
+        <div class="comment__info">
+          <img src="./images/profile-2.jpg" alt="" class="comment__img">
+          <div>
+            <h2 class="comment__name">Bruce McKenzie</h2>
+            <p>Founder & CEO, Huddle</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="comment__content">
+        <p class="comment__text">
+          Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has 
+          become a well-oiled collaboration machine.
+        </p>
+
+        <div class="comment__info">
+          <img src="./images/profile-3.jpg" alt="Porfoil 3" class="comment__img">
+          <div>
+            <h2 class="comment__name">Iva Boyd</h2>
+            <p>Founder & CEO, Huddle</p>
+          </div>        
+        </div>
+      </div>
+    </section>
     
     <section class="formulario">
       
@@ -131,12 +161,12 @@
         questions, our support team would be happy to help you.
       </p>
 
-      <form id="formulario">
+      <form class="formulario__campos" id="formulario">
         <div class="formulario__campo">
         <input 
         class="formulario__email"
         type="text"
-        placeholder="Tu email"
+        placeholder="email@example.com"
         id="email">
         </div>
         
@@ -144,29 +174,72 @@
         <input type="submit" value="Get Started For Free" class="button">
         </div>
       </form>
-      <p class="mensaje" id="mensaje"></p>
+      <p id="mensaje"></p>
 
       <script src="./js/comprobacionFormulario.js"></script>
     </section>
 
-    Get Started For Free
+    <footer class="footer">
+      
+      
+      <img src="./images/logo.svg" alt="Fylo logo" class="footer__logo">
+      <div class="footer__infoContact">
+        <div class="footer__infoContact__content" id="ubicacion">
+          <img src="./images/icon-location.svg" alt="Location" class="footer__infoContact__img">
+          <p class="footer__text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
+            dolore magna aliqua
+          </p>
+        </div>
+      
+        <div class="footer__infoContact__content">
+          <img src="./images/icon-phone.svg" alt="Phone" class="footer__infoContact__img">
+          <p class="footer__text">+1-543-123-4567</p>
+        </div>
+        
+        <div class="footer__infoContact__content">
+          <img src="./images/icon-email.svg" alt="Email" class="footer__infoContact__img">
+          <p class="footer__text">example@fylo.com</p>
+        </div>
+      </div>
 
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
-    dolore magna aliqua
-  
-    +1-543-123-4567
-    example@fylo.com
-  
-    About Us
-    Jobs
-    Press
-    Blog
-  
-    Contact Us
-    Terms
-    Privacy
-  
-    
+      <div class="footer__aboutUs">
+        <a href="" class="footer__link">About Us</a>
+        <a href="" class="footer__link">Jobs</a>
+        <a href="" class="footer__link">Press</a>
+        <a href="" class="footer__link">Blog</a>
+      </div>
+      
+      <div class="footer__contact">
+        <a href="" class="footer__link">Contact Us</a>
+        <a href="" class="footer__link">Terms</a>
+        <a href="" class="footer__link">Privacy</a>
+      </div>
+
+      <div class="footer__container--weebs">
+        <a href="#" class="footer__weebs facebook">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-facebook facebookSvg" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+          <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" />
+          </svg>
+        </a>
+        <a href="#" class="footer__weebs twitter">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter twitterSvg" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+          <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+          </svg>
+        </a>
+        <a href="#" class="footer__weebs instagram">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-instagram instagramSvg" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+          <rect x="4" y="4" width="16" height="16" rx="4" />
+          <circle cx="12" cy="12" r="3" />
+          <line x1="16.5" y1="7.5" x2="16.5" y2="7.501" />
+          </svg>
+        </a>
+      </div>
+    </footer>
+
     <div>
       <p class="attribution">
         Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 

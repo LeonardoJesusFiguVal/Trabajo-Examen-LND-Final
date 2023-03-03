@@ -21,6 +21,7 @@ formulario.addEventListener("submit", (e) => {
     }
     //Si no se cumplen las anteriores el formulario cumple los requisitos y se envia
     else{
-        formulario.submit();
+        mensaje.textContent= "";
+        mensaje.classList.remove("error");
     }
-})
+});
