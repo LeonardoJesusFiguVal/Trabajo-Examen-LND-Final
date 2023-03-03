@@ -1,28 +1,26 @@
-const datos= {
-    email: ""
-};
+//Seleccionamos las variables
+const formulario= document.querySelector(".formulario");
+const mensaje= document.querySelector("#mensaje");
 
-const email= document.querySelector("#email");
+//Evento de validacion de formulario
+formulario.addEventListener("submit", (e) => {
 
-const formulario= document.querySelector("#formulario");
+    const email= document.querySelector("#email").value.trim();
 
-formulario.addEventListener("submit", function (event){
-    event.preventDefault();
-    const {email}=datos;
-    if(email===""){
-        const alerta= document.createElement("P");
-        alerta.textContent= "El campo no puede estar vacio";
-        alerta.classList.add("error");
-        setTimeout(()=>{
-            alerta.remove();
-        },3000);
+    //Comprobamos que el formulario esta vacio
+    if (email === ""){
+        mensaje.textContent= "Por favor ingrese su correo electronico";
+        mensaje.classList.add("error");
+        e.preventDefault();
     }
-});
-
-email.addEventListener("input", comprobarTexto);
-
-function comprobarTexto(event){
-    datos[event.target.id]=event.target.value;
-    console.log(event.target.id);
-    console.log(datos);
-}
+    //Comprobamos si el formulario no tiemne un contenido, una @, un punto, y una extencion
+    else if (!/^\S+@\S+\.\S+$/.test(email)){
+        mensaje.textContent= "El correo electronico no es valido";
+        mensaje.classList.add("error");
+        e.preventDefault();
+    }
+    //Si no se cumplen las anteriores el formulario cumple los requisitos y se envia
+    else{
+        formulario.submit();
+    }
+})

@@ -15,7 +15,7 @@ html{
 
     --cyan-button: hsl(176, 68%, 64%);
     --blue-button: hsl(198, 60%, 50%);
-    --error-mesage: hsl(0, 100%, 63%);
+    --error-mesage: hsl(0, 85%, 45%);
     --white: hsl(0, 0%, 100%);
 }
 
@@ -91,7 +91,7 @@ body{
     border-radius: 5rem;
     text-decoration: none;
     color: var(--white);
-    
+    /*overflow: hidden;*/
 }
 
 /* Features */ 
@@ -140,6 +140,11 @@ body{
         grid-template-rows: repeat(2, 1fr);
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .wrapper{
+        max-width: 120rem;
+        margin: 0 auto;
+    }
 }
 
 /* Formulario */
@@ -164,6 +169,14 @@ body{
     text-align: center;
 }
 
+.formulario__email{
+    
+}
+
 .error{
-    color: red;
+    color: var(--white);
+    background-color: var(--error-mesage);
+    text-transform: capitalize;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
 }
